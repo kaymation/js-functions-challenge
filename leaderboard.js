@@ -66,6 +66,9 @@ function createRows(){
     if (a.wins > b.wins) {
       return -1;
     }
+    if(a.losses > b.losses){
+      return 1
+    }
     return 0;
   });
   for (var i = 0; i < rows.length; i++) {
@@ -114,5 +117,6 @@ console.log("--------------------------------------------------");
 console.log("| Name      Rank      Total Wins    Total Losses |");
 for (var i = 0; i < rows.length; i++) {
   rowDisplay(rows[i]);
+  debugger;
 }
 console.log("--------------------------------------------------");
